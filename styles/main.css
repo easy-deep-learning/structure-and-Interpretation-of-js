@@ -1,0 +1,3 @@
+.slide:first-of-type::after {
+  display: none;
+}
