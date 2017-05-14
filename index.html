@@ -413,46 +413,143 @@ name <span class="comment">// =>'Alex' </span></code></pre>
 </section>
 <!-- Специальные типы (end) -->
 
-<!-- Массив (begin) -->
+<!-- Объекты (begin) -->
 <section class="slide">
-
-  <h2>Массив</h2>
-
-  <p></p>
+  <h2 class="shout">Объекты</h2>
 </section>
-<!-- Массив (end) -->
+<!-- Объекты (end) -->
 
+<!-- ООП на прототипах (begin) -->
+<section class="slide">
+  <h2>ООП на прототипах</h2>
+  <ul>
+    <li>Для создания объкта НЕ требуется класса
+    <del><pre><code> new Object({ name: 'Alex' }); </code></pre></del>
+    <pre><code> { name: 'Alex' }; <span class="comment">// Литерал объекта</span> </code></pre>
+    </li>
+    <li>Наследование через цепочку прототипов
+    <pre><code> person.__proto__</code></pre>
+    </li>
+  </ul>
+</section>
+<!-- ООП на прототипах (end) -->
+
+<!-- Ссылка картинка (begin) -->
+<section class="slide">
+  <img src="pictures/live-in-link.jpg" alt="" class="cover">
+</section>
+<!-- Ссылка картинка (end) -->
+
+<!-- Ссылочный тип (begin) -->
+<section class="slide">
+  <h2>Ссылочный тип</h2>
+
+<pre><code>
+let alexPerson = {name: 'Alex'}
+let mikePerson = alexPerson;
+mikePerson.name = 'Mike';
+alexPerson.name <span class="comment">// => 'Mike'</span>
+</code></pre>
+</section>
+<!-- Ссылочный тип (end) -->
+
+<!-- Разновидности объектов (begin) -->
+<section class="slide">
+  <h2>Разновидности объектов</h2>
+  <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">
+    Standard built-in objects</a>
+    (<a href="https://ru.wikipedia.org/wiki/Стандартная_библиотека">Стандартная_библиотека</a>)</p>
+
+  <ul>
+    <li>Boolean | Number, Math, Date | String, RegExp | Symbol </li>
+    <li>Error, EvalError, InternalError, SyntaxError, TypeError, ReferenceError</li>
+    <li>Object <code>{name: 'Alex', hobbies: ['js'] }</code></li>
+    <li>Array <code>[1, 2, 'three', {name: 'Alex'}, [1]]</code></li>
+    <li>RegExp</li>
+    <li>Function</li>
+  </ul>
+</section>
+<!-- Разновидности объектов (end) -->
 
 <!-- Функция (begin) -->
 <section class="slide">
-
-  <h2>Функция</h2>
-
-  <p></p>
+  <h2 class="shout">Функции</h2>
 </section>
 <!-- Функция (end) -->
 
 
-<!-- Просто объект (begin) -->
+<!-- First class citizen (begin) -->
 <section class="slide">
-
-  <h2>Просто объект</h2>
-
-  <p></p>
+  <img src="pictures/citizens.jpg" alt="" class="cover">
 </section>
-<!-- Просто объект (end) -->
+<!-- First class citizen (end) -->
 
+<!-- Функция определение (begin) -->
+<section class="slide">
+  <h2>Функция, создание</h2>
 
+  <p>Объект со скрытым полем <code>[[Call]]</code></p>
+  <pre><code>let getName = function() {};</code></pre>
+  <pre><code>function getName() {};</code></pre>
+  <pre><code>let getName = () => {}</code></pre>
+</section>
+<!-- Функция определение (end) -->
 
+<!-- Функция вызов (begin) -->
+<section class="slide">
+  <h2>Функция, использование</h2>
+  <pre><code>let person = ({name: 'Alex'});</code></pre>
+  <pre><code>let name = getName(person);</code></pre>
+</section>
+<!-- Функция (end) -->
+
+<!-- Функция использование 2 (begin) -->
+<section class="slide">
+  <h2>Функция, использование</h2>
+  <div style="font-size: 0.8em;">
+<pre><code>let personGetter = () => ({name: 'Alex'});</code></pre>
+<pre><code>let getName = (personGetter) => {
+  return personGetter().name;
+ }</code></pre>
+<pre><code>let name = getName(personGetter);
+</code></pre>
+  </div>
+</section>
+<!-- Функция использование 2 (end) -->
+
+<!-- Функция использование 2 (begin) -->
+<section class="slide">
+  <h2>Функция, использование</h2>
+  <div style="font-size: 0.8em;">
+    <pre><code>[1, 2, 3, 4].forEach(function() {});</code></pre>
+  </div>
+</section>
+<!-- Функция использование 2 (end) -->
 
 <!-- Среды исполнения (begin) -->
 <section class="slide">
-
   <h2>Среды исполнения</h2>
 
-  <p>browser / node</p>
+  <ul>
+    <li>Browser: <a href="https://www.w3.org/DOM/">DOM</a> (<code>document</code>, <code>history</code>), <a href="http://w3c.github.io/html/">HTML API</a> (<code>fetch</code>), </li>
+    <li>Node: <a href="https://nodejs.org/dist/latest-v7.x/docs/api/">API</a> builtin libraries (<code>net</code>, <code>fs</code>)</li>
+    <li><a href="http://www.girliemac.com/blog/2015/12/25/kittycam-raspberrypi-camera-cat-face-recog-nodejs/">Raspberry</a></li>
+  </ul>
 </section>
 <!-- Среды исполнения (end) -->
+
+<!-- KittyCam (begin) -->
+<section class="slide">
+  <img src="pictures/js-on-raspberry.jpg" alt="" class="cover">
+</section>
+<!-- KittyCam (end) -->
+
+
+<!-- Applause (begin) -->
+<section class="slide">
+  <img src="pictures/bender-aplause.jpg" alt="" class="cover">
+</section>
+<!-- Applause (end) -->
 
 
 <!-- Library (begin) -->
@@ -464,6 +561,7 @@ name <span class="comment">// =>'Alex' </span></code></pre>
     <li><a href="https://www.safaribooksonline.com/library/view/learning-javascript-3rd/9781491914892/">Learning JavaScript, 3rd Edition</a></li>
     <li><a href="https://github.com/getify/You-Dont-Know-JS/tree/master/types%20%26%20grammar">You Don't Know JS: Types & Grammar</a></li>
     <li><a href="http://dmitrysoshnikov.com/ecmascript/ru-javascript-the-core/#obyekt">JavaScript. Ядро. Цикл статей Dmitry Soshnikov</a></li>
+    <li><a href="https://tc39.github.io/ecma262/">ECMAScript® 2018 Language Specification</a></li>
   </ul>
 </section>
 <!-- Library (end) -->
