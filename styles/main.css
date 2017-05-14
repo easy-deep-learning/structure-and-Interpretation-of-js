@@ -16,11 +16,11 @@ pre {
   padding: 0 1em;
 }
 
-code .boolean {
+.boolean {
   color: black;
 }
 
-code .comment {
+.comment {
   font-size: 0.6em;
   color: gray;
 }
@@ -29,23 +29,23 @@ code .big {
   font-size: 1.6em;
 }
 
-code .number {
+.number {
   color: blue;
 }
 
-code .string {
+.string {
   color: #008000;
 }
 
-code .identifier {
+.identifier {
 
 }
 
-code .keyword {
+.keyword {
   color: #000080;
   font-weight: bold;
 }
 
 code .error {
-  color: #ff0000;
+  color: #f00;
 }

@@ -302,6 +302,15 @@ x =
 </section>
 <!-- Пример приоритета операторов (end) -->
 
+<!-- Перегрузка операторов (begin) -->
+<section class="slide">
+  <h2>Перегрузка операторов</h2>
+  <pre><code>2 + 2 <span class="comment">// => 4</span></code></pre>
+  <pre><code>'2' + 2 <span class="comment">// => '22'</span></code></pre>
+  <pre><code>+'42' <span class="comment">// => 42</span></code></pre>
+  <pre class="next"><code>+('42a') <span class="comment">// => NaN</span></code></pre>
+</section>
+<!-- Перегрузка операторов (end) -->
 
 <!-- Все — объект (begin) -->
 <section class="slide">
@@ -371,11 +380,21 @@ x =
 </section>
 <!-- Все — объект (end) -->
 
+
 <!-- Строки (begin) -->
 <section class="slide">
   <h2>Строки</h2>
+  <ul>
+    <li class="next">UTF-16: <code>const PI = 'π'</code></li>
+    <li class="next">Escape-последовательности <code>'It can\'t be a quote'</code></li>
+    <li class="next">Все — объект: <code>"Привет,мир".length</code> => 10</li>
+    <li class="next">Immutable:
+<pre><code> let name = <span class="string">'Alex'</span>;
+name[1] = 'b';
+name <span class="comment">// =>'Alex' </span></code></pre>
 
-  <p></p>
+    </li>
+  </ul>
 </section>
 <!-- Строки (end) -->
 
@@ -383,10 +402,14 @@ x =
 
 <!-- Специальные типы (begin) -->
 <section class="slide">
-
   <h2>Специальные типы</h2>
-
   <p>undefined, null, NaN</p>
+  <ul>
+    <li><code>typeof undefined</code> => <code><span class="string">"undefined"</span></code></li>
+    <li><code>typeof null</code> => <code><span class="string">"object"</span></code></li>
+    <li><code>typeof NaN</code> => <code><span class="string">"number"</span></code></li>
+    <li class="next"><code>NaN === NaN</code> => <code><span class="boolean">false</span></code></li>
+  </ul>
 </section>
 <!-- Специальные типы (end) -->
 
