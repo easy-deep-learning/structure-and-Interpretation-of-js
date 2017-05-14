@@ -3,6 +3,7 @@
 <head>
   <title>Структура и интерпретация javascript</title>
   <meta charset="utf-8">
+  <!--<meta http-equiv="refresh" content="3">-->
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
@@ -20,27 +21,6 @@
   <h2 class="shout">Структура и интерпретация javascript</h2>
 </section>
 <!-- Заглавная страница (end) -->
-
-<!-- TOC (begin) -->
-<section class="slide">
-  <h2>Оглавление</h2>
-  <ul>
-    <li></li>
-  </ul>
-</section>
-<!-- TOC (end) -->
-
-<!-- Мозг человека (begin) -->
-<section class="slide">
-  <h2 class="shout">Мозг человека</h2>
-</section>
-<!-- Мозг человека (end) -->
-
-<!-- Homer (begin) -->
-<section class="slide">
-  <img src="pictures/human-brain-homer.jpg" alt="" class="cover">
-</section>
-<!-- Homer (end) -->
 
 <!-- Языки человека (begin) -->
 <section class="slide">
@@ -72,11 +52,18 @@
 </section>
 <!-- Функции естественного языка (end) -->
 
-<!-- Стуктура языка (begin) -->
+<!-- НО (begin) -->
 <section class="slide">
-  <img src="pictures/natural-language-structure.jpg" width="1200" alt="" class="cover">
+  <h2 class="shout">But...</h2>
 </section>
-<!-- Стуктура языка (end) -->
+<!-- НО (end) -->
+
+
+<!-- Bender brain (begin) -->
+<section class="slide">
+  <img src="pictures/cpu-brain-bender.jpg" alt="" class="cover">
+</section>
+<!-- Bender brain (end) -->
 
 <!-- CPU (begin) -->
 <section class="slide">
@@ -84,11 +71,11 @@
 </section>
 <!-- CPU (end) -->
 
-<!-- Bender brain (begin) -->
+<!-- CPU 4004 (begin) -->
 <section class="slide">
-  <img src="pictures/cpu-brain-bender.jpg" alt="" class="cover">
+  <img src="pictures/Intel_C4004.jpg" alt="" class="cover">
 </section>
-<!-- Bender brain (end) -->
+<!-- CPU 4004 (end) -->
 
 <!-- CPU schema (begin) -->
 <section class="slide">
@@ -99,23 +86,24 @@
 </section>
 <!-- CPU schema (end) -->
 
-<!-- CPU 4004 (begin) -->
-<section class="slide">
-  <img src="pictures/Intel_C4004.jpg" alt="" class="cover">
-</section>
-<!-- CPU 4004 (end) -->
 
-<!-- CPU language (begin) -->
+<!-- transistor (begin) -->
 <section class="slide">
-  <img src="pictures/computer-science-programming-languages.jpg" alt="" class="cover">
+  <img src="pictures/transistor.png" alt="" class="cover">
 </section>
-<!-- CPU language (end) -->
+<!-- transistor (end) -->
 
 <!-- 2+2 (begin) -->
 <section class="slide">
-  <h2 class="shout">2+2</h2>
+  <h2 class="shout">10 + 10 = 100</h2>
 </section>
 <!-- 2+2 (end) -->
+
+<!-- low level programmer (begin) -->
+<section class="slide">
+  <img src="pictures/low-level-programming.jpg" alt="" class="cover">
+</section>
+<!-- low level programmer (end) -->
 
 <!-- 4004 instruction set (begin) -->
 <section class="slide">
@@ -126,18 +114,18 @@
 </section>
 <!-- 4004 instruction set (end) -->
 
+<!-- asm (begin) -->
+<section class="slide">
+  <img src="pictures/8080asm.png" alt="" class="cover">
+</section>
+<!-- asm (end) -->
+
 <!-- binary hole (begin) -->
 <section class="slide">
   <img src="pictures/stock-photo-binary-code.jpg" alt="" class="cover">
 </section>
 <!-- binary hole (end) -->
 
-
-<!-- low level programmer (begin) -->
-<section class="slide">
-  <img src="pictures/low-level-programming.jpg" alt="" class="cover">
-</section>
-<!-- low level programmer (end) -->
 
 <!-- 2017 (begin) -->
 <section class="slide">
@@ -150,6 +138,12 @@
   <img src="pictures/homer-brains-words.jpg" alt="" class="cover">
 </section>
 <!-- homer brain words (end) -->
+
+<!-- CPU language (begin) -->
+<section class="slide">
+  <img src="pictures/computer-science-programming-languages.jpg" alt="" class="cover">
+</section>
+<!-- CPU language (end) -->
 
 <!-- High level languages (begin) -->
 <section class="slide">
@@ -190,6 +184,387 @@
   <img src="pictures/dog-duck-falls.gif" class="cover" alt="">
 </section>
 <!-- dog with Duck (end) -->
+
+
+<!-- Азбука (begin) -->
+<section class="slide">
+  <img src="pictures/azbuka.jpg" alt="" class="cover">
+</section>
+<!-- Азбука (end) -->
+
+<!-- Литерал (begin) -->
+<section class="slide">
+  <h2>Литерал [literal]</h2>
+  <p>Записанные непосредственно в коде данные. As is.</p>
+
+  <pre><code><span class="boolean">true</span><span class="comment"> // Булево значение "истина"</span></code></pre>
+
+  <pre><code><span class="number">2</span><span class="comment"> // Число "два"</span></code></pre>
+
+  <pre><code><span class="string">'Привет, мир!'</span> <span class="comment">// строка  "Привет, мир"</span></code></pre>
+</section>
+<!-- Литерал (end) -->
+
+<!-- Идентификатор (begin) -->
+<section class="slide">
+  <h2>Идентификатор [identifier]</h2>
+
+  <p>Имя: состоит из букв UTF-16 и знаков <code>_</code>, <code>$</code>.</p>
+  <p>Не может начинаться с цифры и быть зарезервированным словом.</p>
+
+  <pre><code><span class="identifier">_name_of_my_$cat</span><span class="comment"> // Правильно</span></code></pre>
+  <pre><code><span class="identifier error">return</span><span class="comment"> // Ошибка</span>
+  </code></pre>
+</section>
+<!-- Идентификатор (end) -->
+
+<!-- инструкция (begin) -->
+<section class="slide">
+
+  <h2>Инструкция [statement]</h2>
+  <p>Цель: выполнить действие</p>
+
+  <pre><code>
+  <span class="keyword">let</span> name
+  </code></pre>
+
+  <ul>
+    <li>Создана (задекларирована) переменная <code>name</code></li>
+  </ul>
+</section>
+<!-- инструкция (end) -->
+
+<!-- инструкция (begin) -->
+<section class="slide">
+
+  <h2>Инструкция [statement]</h2>
+  <p>Цель: выполнить действие</p>
+
+  <pre><code>
+  <span class="keyword">do</span> {} <span class="keyword">while ()</span>
+  </code></pre>
+
+</section>
+<!-- инструкция (end) -->
+
+<!-- Выражение (begin) -->
+<section class="slide">
+  <h2>Выражение [expression]</h2>
+  <p>Цель: получить результат</p>
+
+  <pre><code>
+   2 + 2
+  </code></pre>
+
+  <ul>
+    <li>Результат: 4</li>
+  </ul>
+</section>
+<!-- Выражение (end) -->
+
+<!-- Оператор (begin) -->
+<section class="slide">
+  <h2>Операторы [operators]</h2>
+  <ul>
+    <li><code>()</code>  группировка выражений: <code>(2 + 2) * 3</code></li>
+    <li><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>=</code> математика</li>
+    <li><code>.</code> Получение свойства: <code>person.name</code></li>
+    <li><code>[ ]</code> Получение свойства с вычислением: <code>person[getName()]</code></li>
+    <li><code>===</code>, <code> > </code>, <code> < </code> Равенство, соотношение</li>
+    <li><code>=</code>, <code>+=</code>, <code>-=</code> Присваивание</li>
+    <li>...</li>
+    <li><code>,</code> <a href="https://habrahabr.ru/post/116827/">Оператор запятая</a></li>
+  </ul>
+</section>
+<!-- Оператор (end) -->
+
+<!-- Пример выражения (begin) -->
+<section class="slide">
+  <pre><code><span class="keyword">let</span> four = 2 <span class="operator">+</span> 2;
+    <span class="comment"> // => let возвращает undefined</span></code></pre>
+  <pre><code>four;
+    <span class="comment"> // выражение "получить значение переменной",
+       //  результат число 4</span></code></pre>
+</section>
+<!-- Пример выражения (end) -->
+
+<!-- Пример приоритета операторов (begin) -->
+<section class="slide">
+  <h2>Приоритет операторов</h2>
+
+  <pre><code><span class="keyword">let</span> x = <span class="number">1</span>;
+x += <span class="number">20</span>; <span class="comment">У "=" самый низкий приоритет</span></code></pre>
+
+  <pre><code>x += <span class="number">20</span>;
+x + <span class="number">20</span>
+x =
+  </code></pre>
+</section>
+<!-- Пример приоритета операторов (end) -->
+
+<!-- Перегрузка операторов (begin) -->
+<section class="slide">
+  <h2>Перегрузка операторов</h2>
+  <pre><code>2 + 2 <span class="comment">// => 4</span></code></pre>
+  <pre><code>'2' + 2 <span class="comment">// => '22'</span></code></pre>
+  <pre><code>+'42' <span class="comment">// => 42</span></code></pre>
+  <pre class="next"><code>+('42a') <span class="comment">// => NaN</span></code></pre>
+</section>
+<!-- Перегрузка операторов (end) -->
+
+<!-- Все — объект (begin) -->
+<section class="slide">
+  <h2 class="shout">Все — объект</h2>
+</section>
+<!-- Все — объект (end) -->
+
+<!-- Логические (Булевы) значения (begin) -->
+<section class="slide">
+  <h2>Логические (Булевы) значения</h2>
+  <pre><code>0 == false</code></pre>
+
+  <ul>
+    <li><code>false</code> конвертируется в число <code>0</code></li>
+  </ul>
+
+  <pre><code>'0' == false</code></pre>
+
+  <ul>
+    <li>Строка <code>'0'</code> конвертируется в число <code>0</code></li>
+    <li><code>false</code> конвертируется в число <code>0</code></li>
+  </ul>
+</section>
+<!-- Логические (Булевы) значения (end) -->
+
+<section class="slide">
+  <h2>Все — объект</h2>
+
+  <pre><code><span class="keyword">true</span> === <span class="string">"boolean"</span> <span class="comment">// => true</span></code></pre>
+  <pre><code><span class="keyword">true</span>.constructor <span class="comment">// => Boolean</span></code></pre>
+  <pre><code><span class="keyword">false</span>.toString() <span class="comment">// => Строка "false"</span></code></pre>
+  <pre><code><span class="keyword">false</span> + <span class="string">""</span> == <span class="keyword">false</span> <span class="comment">// => ?</span></code></pre>
+<p class="next" style="position: absolute; bottom: 63px; right: 200px;"><code>false</code></p>
+</section>
+
+
+<!-- Числа (begin) -->
+<section class="slide">
+  <h2>Числа</h2>
+  <ul>
+    <li> ±1.7976931348623157 × 10<sup>308</sup></li>
+    <li class="next">Целые: <code>2</code></li>
+    <li class="next">С плавающей точкой: <code>2.3</code></li>
+    <li class="next">Стандарт <a href="https://ru.wikipedia.org/wiki/IEEE_754-2008">IEEE 754</a>:
+    <pre><code>
+0.1 + 0.2 = 0.3000000000000000<span class="big">4</span>
+    </code></pre>
+      
+    </li>
+  </ul>
+</section>
+<!-- Числа (end) -->
+
+<!-- Все — объект (begin) -->
+<section class="slide">
+  <h2>Все — объект</h2>
+  <pre><code><span class="number">4</span>..__proto__ <span class="comment"> // Number</span></code></pre>
+
+  <ul>
+    <li>toExponential()</li>
+    <li>toFixed()</li>
+    <li>toLocaleString()</li>
+    <li>toPrecision()</li>
+    <li>toString()</li>
+    <li>valueOf()</li>
+  </ul>
+</section>
+<!-- Все — объект (end) -->
+
+
+<!-- Строки (begin) -->
+<section class="slide">
+  <h2>Строки</h2>
+  <ul>
+    <li class="next">UTF-16: <code>const PI = 'π'</code></li>
+    <li class="next">Escape-последовательности <code>'It can\'t be a quote'</code></li>
+    <li class="next">Все — объект: <code>"Привет,мир".length</code> => 10</li>
+    <li class="next">Immutable:
+<pre><code> let name = <span class="string">'Alex'</span>;
+name[1] = 'b';
+name <span class="comment">// =>'Alex' </span></code></pre>
+
+    </li>
+  </ul>
+</section>
+<!-- Строки (end) -->
+
+
+
+<!-- Специальные типы (begin) -->
+<section class="slide">
+  <h2>Специальные типы</h2>
+  <p>undefined, null, NaN</p>
+  <ul>
+    <li><code>typeof undefined</code> => <code><span class="string">"undefined"</span></code></li>
+    <li><code>typeof null</code> => <code><span class="string">"object"</span></code></li>
+    <li><code>typeof NaN</code> => <code><span class="string">"number"</span></code></li>
+    <li class="next"><code>NaN === NaN</code> => <code><span class="boolean">false</span></code></li>
+  </ul>
+</section>
+<!-- Специальные типы (end) -->
+
+<!-- Объекты (begin) -->
+<section class="slide">
+  <h2 class="shout">Объекты</h2>
+</section>
+<!-- Объекты (end) -->
+
+<!-- ООП на прототипах (begin) -->
+<section class="slide">
+  <h2>ООП на прототипах</h2>
+  <ul>
+    <li>Для создания объкта НЕ требуется класса
+    <del><pre><code> new Object({ name: 'Alex' }); </code></pre></del>
+    <pre><code> { name: 'Alex' }; <span class="comment">// Литерал объекта</span> </code></pre>
+    </li>
+    <li>Наследование через цепочку прототипов
+    <pre><code> person.__proto__</code></pre>
+    </li>
+  </ul>
+</section>
+<!-- ООП на прототипах (end) -->
+
+<!-- Ссылка картинка (begin) -->
+<section class="slide">
+  <img src="pictures/live-in-link.jpg" alt="" class="cover">
+</section>
+<!-- Ссылка картинка (end) -->
+
+<!-- Ссылочный тип (begin) -->
+<section class="slide">
+  <h2>Ссылочный тип</h2>
+
+<pre><code>
+let alexPerson = {name: 'Alex'}
+let mikePerson = alexPerson;
+mikePerson.name = 'Mike';
+alexPerson.name <span class="comment">// => 'Mike'</span>
+</code></pre>
+</section>
+<!-- Ссылочный тип (end) -->
+
+<!-- Разновидности объектов (begin) -->
+<section class="slide">
+  <h2>Разновидности объектов</h2>
+  <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">
+    Standard built-in objects</a>
+    (<a href="https://ru.wikipedia.org/wiki/Стандартная_библиотека">Стандартная_библиотека</a>)</p>
+
+  <ul>
+    <li>Boolean | Number, Math, Date | String, RegExp | Symbol </li>
+    <li>Error, EvalError, InternalError, SyntaxError, TypeError, ReferenceError</li>
+    <li>Object <code>{name: 'Alex', hobbies: ['js'] }</code></li>
+    <li>Array <code>[1, 2, 'three', {name: 'Alex'}, [1]]</code></li>
+    <li>RegExp</li>
+    <li>Function</li>
+  </ul>
+</section>
+<!-- Разновидности объектов (end) -->
+
+<!-- Функция (begin) -->
+<section class="slide">
+  <h2 class="shout">Функции</h2>
+</section>
+<!-- Функция (end) -->
+
+
+<!-- First class citizen (begin) -->
+<section class="slide">
+  <img src="pictures/citizens.jpg" alt="" class="cover">
+</section>
+<!-- First class citizen (end) -->
+
+<!-- Функция определение (begin) -->
+<section class="slide">
+  <h2>Функция, создание</h2>
+
+  <p>Объект со скрытым полем <code>[[Call]]</code></p>
+  <pre><code>let getName = function() {};</code></pre>
+  <pre><code>function getName() {};</code></pre>
+  <pre><code>let getName = () => {}</code></pre>
+</section>
+<!-- Функция определение (end) -->
+
+<!-- Функция вызов (begin) -->
+<section class="slide">
+  <h2>Функция, использование</h2>
+  <pre><code>let person = ({name: 'Alex'});</code></pre>
+  <pre><code>let name = getName(person);</code></pre>
+</section>
+<!-- Функция (end) -->
+
+<!-- Функция использование 2 (begin) -->
+<section class="slide">
+  <h2>Функция, использование</h2>
+  <div style="font-size: 0.8em;">
+<pre><code>let personGetter = () => ({name: 'Alex'});</code></pre>
+<pre><code>let getName = (personGetter) => {
+  return personGetter().name;
+ }</code></pre>
+<pre><code>let name = getName(personGetter);
+</code></pre>
+  </div>
+</section>
+<!-- Функция использование 2 (end) -->
+
+<!-- Функция использование 2 (begin) -->
+<section class="slide">
+  <h2>Функция, использование</h2>
+  <div style="font-size: 0.8em;">
+    <pre><code>[1, 2, 3, 4].forEach(function() {});</code></pre>
+  </div>
+</section>
+<!-- Функция использование 2 (end) -->
+
+<!-- Среды исполнения (begin) -->
+<section class="slide">
+  <h2>Среды исполнения</h2>
+
+  <ul>
+    <li>Browser: <a href="https://www.w3.org/DOM/">DOM</a> (<code>document</code>, <code>history</code>), <a href="http://w3c.github.io/html/">HTML API</a> (<code>fetch</code>), </li>
+    <li>Node: <a href="https://nodejs.org/dist/latest-v7.x/docs/api/">API</a> builtin libraries (<code>net</code>, <code>fs</code>)</li>
+    <li><a href="http://www.girliemac.com/blog/2015/12/25/kittycam-raspberrypi-camera-cat-face-recog-nodejs/">Raspberry</a></li>
+  </ul>
+</section>
+<!-- Среды исполнения (end) -->
+
+<!-- KittyCam (begin) -->
+<section class="slide">
+  <img src="pictures/js-on-raspberry.jpg" alt="" class="cover">
+</section>
+<!-- KittyCam (end) -->
+
+
+<!-- Applause (begin) -->
+<section class="slide">
+  <img src="pictures/bender-aplause.jpg" alt="" class="cover">
+</section>
+<!-- Applause (end) -->
+
+
+<!-- Library (begin) -->
+<section class="slide">
+  <h2>Литература</h2>
+
+  <ul>
+    <li><a href="https://www.safaribooksonline.com/library/view/javascript-the-definitive/9781449393854/">JavaScript: The Definitive Guide, 6th Edition</a></li>
+    <li><a href="https://www.safaribooksonline.com/library/view/learning-javascript-3rd/9781491914892/">Learning JavaScript, 3rd Edition</a></li>
+    <li><a href="https://github.com/getify/You-Dont-Know-JS/tree/master/types%20%26%20grammar">You Don't Know JS: Types & Grammar</a></li>
+    <li><a href="http://dmitrysoshnikov.com/ecmascript/ru-javascript-the-core/#obyekt">JavaScript. Ядро. Цикл статей Dmitry Soshnikov</a></li>
+    <li><a href="https://tc39.github.io/ecma262/">ECMAScript® 2018 Language Specification</a></li>
+  </ul>
+</section>
+<!-- Library (end) -->
 
 
 <!-- Contacts (begin) -->

@@ -1,3 +1,51 @@
 .slide:first-of-type::after {
   display: none;
 }
+
+.slide::after {
+  right: 0;
+}
+
+.slide {
+  padding-top: 40px;
+}
+
+pre {
+  font-size: 1.6em;
+  background-color: #f9f9f2;
+  padding: 0 1em;
+}
+
+.boolean {
+  color: black;
+}
+
+.comment {
+  font-size: 0.6em;
+  color: gray;
+}
+
+code .big {
+  font-size: 1.6em;
+}
+
+.number {
+  color: blue;
+}
+
+.string {
+  color: #008000;
+}
+
+.identifier {
+
+}
+
+.keyword {
+  color: #000080;
+  font-weight: bold;
+}
+
+code .error {
+  color: #f00;
+}
