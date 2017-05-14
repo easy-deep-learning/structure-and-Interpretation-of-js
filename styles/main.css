@@ -30,5 +30,18 @@ code .number {
 }
 
 code .string {
-  color: green;
+  color: #008000;
+}
+
+code .identifier {
+
+}
+
+code .keyword {
+  color: #000080;
+  font-weight: bold;
+}
+
+code .error {
+  color: #ff0000;
 }

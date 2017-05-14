@@ -204,7 +204,7 @@
 
 <!-- Литерал (begin) -->
 <section class="slide">
-  <h2>Литерал</h2>
+  <h2>Литерал [literal]</h2>
   <p>Записанные непосредственно в коде данные. As is.</p>
 
   <pre><code><span class="boolean">true</span><span class="comment"> // Булево значение "истина"</span></code></pre>
@@ -217,47 +217,81 @@
 
 <!-- Идентификатор (begin) -->
 <section class="slide">
+  <h2>Идентификатор [identifier]</h2>
 
-  <h2>Идентификатор</h2>
+  <p>Имя: состоит из букв UTF-16 и знаков <code>_</code>, <code>$</code>.</p>
+  <p>Не может начинаться с цифры и быть зарезервированным словом.</p>
 
-  <p></p>
+  <pre><code><span class="identifier">_name_of_my_$cat</span><span class="comment"> // Правильно</span></code></pre>
+  <pre><code><span class="identifier error">return</span><span class="comment"> // Ошибка</span>
+  </code></pre>
 </section>
 <!-- Идентификатор (end) -->
-
-<!-- Выражение (begin) -->
-<section class="slide">
-  <h2>Выражение</h2>
-
-  <p>Цель: результат</p>
-</section>
-<!-- Выражение (end) -->
-
-<!-- Оператор (begin) -->
-<section class="slide">
-
-  <h2>Оператор</h2>
-
-  <p></p>
-</section>
-<!-- Оператор (end) -->
-
-<!-- Операнд (begin) -->
-<section class="slide">
-
-  <h2>Операнд</h2>
-
-  <p></p>
-</section>
-<!-- Операнд (end) -->
 
 <!-- инструкция (begin) -->
 <section class="slide">
 
-  <h2>Инструкция</h2>
+  <h2>Инструкция [statement]</h2>
+  <p>Цель: выполнить действие</p>
 
-  <p></p>
+  <pre><code>
+  <span class="keyword">let</span> name
+  </code></pre>
+
+  <ul>
+    <li>Создана переменная <code>name</code></li>
+  </ul>
 </section>
 <!-- инструкция (end) -->
+
+<!-- Выражение (begin) -->
+<section class="slide">
+  <h2>Выражение [expression]</h2>
+  <p>Цель: получить результат</p>
+
+  <pre><code>
+   2 + 2
+  </code></pre>
+
+  <ul>
+    <li>Равно 4 :)</li>
+  </ul>
+</section>
+<!-- Выражение (end) -->
+
+<!-- Оператор (begin)
+<section class="slide">
+  <h2>Операторы [operators]</h2>
+  <ul>
+    <li>
+      <code><span class="keyword">var</span></code>,
+      <code><span class="keyword">let</span></code>,
+      <code><span class="keyword">const</span></code>
+    </li>
+    <li><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>=</code></li>
+    <li><code>===</code></li>
+    <li><code>,</code></li>
+  </ul>
+</section>
+<!-- Оператор (end) -->
+
+
+<!-- Комбинирование (begin) -->
+<section class="slide">
+  <h2 class="shout">Комбинирование</h2>
+</section>
+<!-- Комбинирование (end) -->
+
+<!-- Пример выражения (begin) -->
+<section class="slide">
+  <h2>Пример</h2>
+  <pre><code>
+    <span class="keyword">let</span> four = 2 <span class="operator">+</span> 2;
+  </code></pre>
+</section>
+<!-- Пример выражения (end) -->
+
+
 
 <!-- Все — объект (begin) -->
 <section class="slide">
@@ -374,6 +408,20 @@
   <p>browser / node</p>
 </section>
 <!-- Среды исполнения (end) -->
+
+
+<!-- Library (begin) -->
+<section class="slide">
+  <h2>Литература</h2>
+
+  <ul>
+    <li><a href="https://www.safaribooksonline.com/library/view/javascript-the-definitive/9781449393854/">JavaScript: The Definitive Guide, 6th Edition</a></li>
+    <li><a href="https://www.safaribooksonline.com/library/view/learning-javascript-3rd/9781491914892/">Learning JavaScript, 3rd Edition</a></li>
+    <li><a href="https://github.com/getify/You-Dont-Know-JS/tree/master/types%20%26%20grammar">You Don't Know JS: Types & Grammar</a></li>
+    <li><a href="http://dmitrysoshnikov.com/ecmascript/ru-javascript-the-core/#obyekt">JavaScript. Ядро. Цикл статей Dmitry Soshnikov</a></li>
+  </ul>
+</section>
+<!-- Library (end) -->
 
 
 <!-- Contacts (begin) -->
