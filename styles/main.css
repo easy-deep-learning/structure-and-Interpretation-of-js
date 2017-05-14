@@ -25,6 +25,10 @@ code .comment {
   color: gray;
 }
 
+code .big {
+  font-size: 1.6em;
+}
+
 code .number {
   color: blue;
 }

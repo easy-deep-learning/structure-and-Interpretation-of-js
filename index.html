@@ -22,16 +22,6 @@
 </section>
 <!-- Заглавная страница (end) -->
 
-<!-- TOC (begin) -->
-<section class="slide">
-  <h2>Оглавление</h2>
-  <ul>
-    <li></li>
-  </ul>
-</section>
-<!-- TOC (end) -->
-
-
 <!-- Языки человека (begin) -->
 <section class="slide">
   <img src="pictures/languages.jpg" alt="">
@@ -239,8 +229,21 @@
   </code></pre>
 
   <ul>
-    <li>Создана переменная <code>name</code></li>
+    <li>Создана (задекларирована) переменная <code>name</code></li>
   </ul>
+</section>
+<!-- инструкция (end) -->
+
+<!-- инструкция (begin) -->
+<section class="slide">
+
+  <h2>Инструкция [statement]</h2>
+  <p>Цель: выполнить действие</p>
+
+  <pre><code>
+  <span class="keyword">do</span> {} <span class="keyword">while ()</span>
+  </code></pre>
+
 </section>
 <!-- инструкция (end) -->
 
@@ -254,90 +257,128 @@
   </code></pre>
 
   <ul>
-    <li>Равно 4 :)</li>
+    <li>Результат: 4</li>
   </ul>
 </section>
 <!-- Выражение (end) -->
 
-<!-- Оператор (begin)
+<!-- Оператор (begin) -->
 <section class="slide">
   <h2>Операторы [operators]</h2>
   <ul>
-    <li>
-      <code><span class="keyword">var</span></code>,
-      <code><span class="keyword">let</span></code>,
-      <code><span class="keyword">const</span></code>
-    </li>
-    <li><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>=</code></li>
-    <li><code>===</code></li>
-    <li><code>,</code></li>
+    <li><code>()</code>  группировка выражений: <code>(2 + 2) * 3</code></li>
+    <li><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>=</code> математика</li>
+    <li><code>.</code> Получение свойства: <code>person.name</code></li>
+    <li><code>[ ]</code> Получение свойства с вычислением: <code>person[getName()]</code></li>
+    <li><code>===</code>, <code> > </code>, <code> < </code> Равенство, соотношение</li>
+    <li><code>=</code>, <code>+=</code>, <code>-=</code> Присваивание</li>
+    <li>...</li>
+    <li><code>,</code> <a href="https://habrahabr.ru/post/116827/">Оператор запятая</a></li>
   </ul>
 </section>
 <!-- Оператор (end) -->
 
-
-<!-- Комбинирование (begin) -->
-<section class="slide">
-  <h2 class="shout">Комбинирование</h2>
-</section>
-<!-- Комбинирование (end) -->
-
 <!-- Пример выражения (begin) -->
 <section class="slide">
-  <h2>Пример</h2>
-  <pre><code>
-    <span class="keyword">let</span> four = 2 <span class="operator">+</span> 2;
-  </code></pre>
+  <pre><code><span class="keyword">let</span> four = 2 <span class="operator">+</span> 2;
+    <span class="comment"> // => let возвращает undefined</span></code></pre>
+  <pre><code>four;
+    <span class="comment"> // выражение "получить значение переменной",
+       //  результат число 4</span></code></pre>
 </section>
 <!-- Пример выражения (end) -->
 
+<!-- Пример приоритета операторов (begin) -->
+<section class="slide">
+  <h2>Приоритет операторов</h2>
+
+  <pre><code><span class="keyword">let</span> x = <span class="number">1</span>;
+x += <span class="number">20</span>; <span class="comment">У "=" самый низкий приоритет</span></code></pre>
+
+  <pre><code>x += <span class="number">20</span>;
+x + <span class="number">20</span>
+x =
+  </code></pre>
+</section>
+<!-- Пример приоритета операторов (end) -->
 
 
 <!-- Все — объект (begin) -->
 <section class="slide">
-
-  <h2>Все — объект</h2>
-
-  <p></p>
+  <h2 class="shout">Все — объект</h2>
 </section>
 <!-- Все — объект (end) -->
 
 <!-- Логические (Булевы) значения (begin) -->
 <section class="slide">
-
   <h2>Логические (Булевы) значения</h2>
+  <pre><code>0 == false</code></pre>
 
-  <p></p>
+  <ul>
+    <li><code>false</code> конвертируется в число <code>0</code></li>
+  </ul>
+
+  <pre><code>'0' == false</code></pre>
+
+  <ul>
+    <li>Строка <code>'0'</code> конвертируется в число <code>0</code></li>
+    <li><code>false</code> конвертируется в число <code>0</code></li>
+  </ul>
 </section>
 <!-- Логические (Булевы) значения (end) -->
+
+<section class="slide">
+  <h2>Все — объект</h2>
+
+  <pre><code><span class="keyword">true</span> === <span class="string">"boolean"</span> <span class="comment">// => true</span></code></pre>
+  <pre><code><span class="keyword">true</span>.constructor <span class="comment">// => Boolean</span></code></pre>
+  <pre><code><span class="keyword">false</span>.toString() <span class="comment">// => Строка "false"</span></code></pre>
+  <pre><code><span class="keyword">false</span> + <span class="string">""</span> == <span class="keyword">false</span> <span class="comment">// => ?</span></code></pre>
+<p class="next" style="position: absolute; bottom: 63px; right: 200px;"><code>false</code></p>
+</section>
 
 
 <!-- Числа (begin) -->
 <section class="slide">
-
   <h2>Числа</h2>
-
-  <p></p>
+  <ul>
+    <li> ±1.7976931348623157 × 10<sup>308</sup></li>
+    <li class="next">Целые: <code>2</code></li>
+    <li class="next">С плавающей точкой: <code>2.3</code></li>
+    <li class="next">Стандарт <a href="https://ru.wikipedia.org/wiki/IEEE_754-2008">IEEE 754</a>:
+    <pre><code>
+0.1 + 0.2 = 0.3000000000000000<span class="big">4</span>
+    </code></pre>
+      
+    </li>
+  </ul>
 </section>
 <!-- Числа (end) -->
 
+<!-- Все — объект (begin) -->
+<section class="slide">
+  <h2>Все — объект</h2>
+  <pre><code><span class="number">4</span>..__proto__ <span class="comment"> // Number</span></code></pre>
+
+  <ul>
+    <li>toExponential()</li>
+    <li>toFixed()</li>
+    <li>toLocaleString()</li>
+    <li>toPrecision()</li>
+    <li>toString()</li>
+    <li>valueOf()</li>
+  </ul>
+</section>
+<!-- Все — объект (end) -->
+
 <!-- Строки (begin) -->
 <section class="slide">
-
   <h2>Строки</h2>
 
   <p></p>
 </section>
 <!-- Строки (end) -->
 
-<!-- Символы (begin) -->
-<section class="slide">
-
-  <h2>Символы</h2>
-
-  <p></p>
-</section>
-<!-- Символы (end) -->
 
 
 <!-- Специальные типы (begin) -->
@@ -378,25 +419,6 @@
 </section>
 <!-- Просто объект (end) -->
 
-
-<!-- Date, RegExp, Math (begin) -->
-<section class="slide">
-
-  <h2>Date, RegExp, Math</h2>
-
-  <p></p>
-</section>
-<!-- Date, RegExp, Math (end) -->
-
-
-<!-- Map, Set (begin) -->
-<section class="slide">
-
-  <h2>Map, Set</h2>
-
-  <p></p>
-</section>
-<!-- Map, Set (end) -->
 
 
 
