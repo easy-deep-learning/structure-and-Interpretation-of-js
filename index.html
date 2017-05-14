@@ -312,6 +312,18 @@ x =
 </section>
 <!-- Перегрузка операторов (end) -->
 
+<!-- Порядок вычисления выражения (begin) -->
+<section class="slide">
+  <h2>Порядок вычисления выражения</h2>
+  <p>слева направо: 1 => 2 => 3 => ...</p>
+  <pre><code>
+    2 - 2 - 2 <span class="comment">// => -2</span>
+    2 - 2 = 0
+    0 - 2 = -2
+  </code></pre>
+</section>
+<!-- Порядок вычисления выражения (end) -->
+
 <!-- Все — объект (begin) -->
 <section class="slide">
   <h2 class="shout">Все — объект</h2>
@@ -500,31 +512,56 @@ alexPerson.name <span class="comment">// => 'Mike'</span>
   <h2>Функция, использование</h2>
   <pre><code>let person = ({name: 'Alex'});</code></pre>
   <pre><code>let name = getName(person);</code></pre>
+  <pre><code>[1, 2, 3, 4].forEach(item => {});</code></pre>
 </section>
 <!-- Функция (end) -->
 
-<!-- Функция использование 2 (begin) -->
+<!-- Функция создание 2 (begin) -->
 <section class="slide">
-  <h2>Функция, использование</h2>
+  <h2>Функция, применение</h2>
   <div style="font-size: 0.8em;">
-<pre><code>let personGetter = () => ({name: 'Alex'});</code></pre>
-<pre><code>let getName = (personGetter) => {
-  return personGetter().name;
- }</code></pre>
-<pre><code>let name = getName(personGetter);
-</code></pre>
+<pre><code><span class="comment">/** @return {Function} */</span>
+function personGetter() {
+  let person = { name: 'Alex' };
+  return function () { return person; }
+}</code></pre>
+    <pre><code>personGetter()().name;</code></pre>
   </div>
 </section>
-<!-- Функция использование 2 (end) -->
+<!-- Функция создание 2 (end) -->
 
-<!-- Функция использование 2 (begin) -->
+<!-- apply (begin) -->
 <section class="slide">
-  <h2>Функция, использование</h2>
-  <div style="font-size: 0.8em;">
-    <pre><code>[1, 2, 3, 4].forEach(function() {});</code></pre>
-  </div>
+  <h2>apply</h2>
+  <pre><code>let getName = function() {
+ return this.name;
+}
+  </code></pre>
+  
+  <pre><code>getName.apply({name: 'Alex'})</code></pre>
 </section>
-<!-- Функция использование 2 (end) -->
+<!-- apply (end) -->
+
+<!-- Функция, композиция (begin) -->
+<section class="slide">
+  <h2>Функция, композиция</h2>
+
+  <script src="https://gist.github.com/ericelliott/a8ce294569f7e4921a5b61a2ea717d32.js"></script>
+</section>
+<!-- Функция, композиция (end) -->
+
+
+<!-- SICP (begin) -->
+<section class="slide">
+  <img src="pictures/sicp-wizard.jpg" alt="" class="cover">
+</section>
+<!-- SICP (end) -->
+
+<!-- binary hole (begin) -->
+<section class="slide">
+  <img src="pictures/stock-photo-binary-code.jpg" alt="" class="cover">
+</section>
+<!-- binary hole (end) -->
 
 <!-- Среды исполнения (begin) -->
 <section class="slide">
